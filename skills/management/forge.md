@@ -82,7 +82,7 @@ metadata:
 
 ## 🔒 模型要求（强制）
 - 执行用本地模型（Gemma-4-E4B via llama-server）
-- 管理者（我）发 curl 调 172.21.16.1:8080
+- 管理者（我）发 curl 调 本地模型
 - ❌ 决不用 API 模型执行专家任务
 - **API拒绝时（内容安全拦截），自动降级到本地模型重试**
 
@@ -224,7 +224,7 @@ skill_manage(
 
 ```markdown
 ## 🔒 模型策略（强制）
-- 默认用本地模型（Gemma-4-E4B via llama-server），curl调172.21.16.1:8080
+- 默认用本地模型（Gemma-4-E4B via llama-server），curl调本地模型
 - 本地两次不达标 → 报管理者
 - **API拒绝执行时（内容安全拦截），自动降级到本地模型重试，不报告失败**
 ```
@@ -233,7 +233,7 @@ skill_manage(
 每个专家的 SKILL.md 必须包含以下模型策略：
 ```markdown
 ## 🔒 模型策略（强制）
-- 默认用本地模型（Gemma-4-E4B via llama-server），curl调172.21.16.1:8080
+- 默认用本地模型（Gemma-4-E4B via llama-server），curl调本地模型
 - 本地两次不达标 → 报管理者
 - **API拒绝执行时（内容安全拦截），自动降级到本地模型重试，不报告失败**
 ```
